@@ -1,12 +1,12 @@
 # Sistema Bancário simples 🏛️💰
 
 ## Sobre 🔎
-
 Este é um projeto de um sistema bancário simples, proposto como exercício
 no curso Java Completo, do professor Nélio Alves na Udemy. O objetivo é
 colocar em prática conceitos fundamentais de Programação Orientada a Objetos,
 como encapsulamento, herança, polimorfismo, além de getters,
 setters, construtores, sobrecarga de métodos, entre outros tópicos.
+
 ---
 ## Funcionalidades ⚙️
 - Cadastra uma conta recebendo o número da conta, o nome do titular e um depósito inicial (opcional);
