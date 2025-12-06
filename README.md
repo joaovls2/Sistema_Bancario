@@ -1,5 +1,5 @@
 # Sistema Bancário 🏛️💰
----
+
 ## Sobre 🔎
 Este é um projeto de um sistema bancário simples, proposto como exercício
 no curso Java Completo, do professor Nélio Alves na Udemy. O objetivo é
