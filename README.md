@@ -1,4 +1,4 @@
-# Sistema Bancário simples 🏛️💰
+# Sistema Bancário 🏛️💰
 
 ## Sobre 🔎
 Este é um projeto de um sistema bancário simples, proposto como exercício
