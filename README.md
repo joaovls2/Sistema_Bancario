@@ -21,10 +21,13 @@ setters, construtores, sobrecarga de métodos, entre outros tópicos.
 - Programação Orientada a Objetos (POO)
 - Git & GitHub.
 ---
-## Observações 📌
-No momento, o sistema permite o cadastro de apenas uma conta e possui funcionalidades básicas.
-Entretanto, pretendo evoluir o projeto continuamente, adicionando novas features e aprimorando
-a estrutura conforme avanço nos meus estudos de Java. 🚧
+## 📘 Primeira Versão do Projeto [21/12/25]
+A primeira versão do Sistema Bancário foi desenvolvida como parte do estudo
+dos fundamentos de Programação Orientada a Objetos em Java.
+
+Nessa etapa, o sistema permitia o cadastro de uma única conta bancária,
+realização de depósitos e saques, atualização do nome do titular
+e exibição dos dados da conta. 🚧
 ---
 ## 📌 Histórico de Atualizações
 
