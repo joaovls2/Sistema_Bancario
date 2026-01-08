@@ -1,11 +1,18 @@
 public class BankAccount {
 
+    private static int nextNumber = 100000;
     private final int accountNumber;
     private String name;
     private double balance;
 
-    public BankAccount(int accountNumber, String name) {
-        this.accountNumber = accountNumber;
+    public BankAccount(String name, double initialDeposit) {
+        this.accountNumber = ++nextNumber;
+        this.name = name;
+        this.balance = initialDeposit;
+    }
+
+    public BankAccount(String name) {
+        this.accountNumber = ++nextNumber;
         this.name = name;
         this.balance = 0.0;
     }
@@ -30,8 +37,12 @@ public class BankAccount {
         this.balance += money;
     }
 
-    public void cashout(Double money) {
-            this.balance -= money + 5.0;
+    public boolean cashout(double money) {
+        if (money + 5.0 > balance) {
+            return false;
+        }
+        balance -= money + 5.0;
+        return true;
     }
 
     @Override
