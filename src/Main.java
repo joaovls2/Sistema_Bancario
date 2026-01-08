@@ -76,8 +76,6 @@ public class Main {
                     } else {
                         System.out.println("Insufficient balance.");
                     }
-
-                    System.out.println(foundAccount);
                     break;
                 case 4:
                     System.out.println("Account number:");
@@ -112,10 +110,10 @@ public class Main {
                     }
                     break;
                 case 0:
-                    System.out.println("Encerrando o sistema...");
+                    System.out.println("Exiting...");
                     break;
                 default:
-                    System.out.println("Opção inválida!");
+                    System.out.println("Option invalid!");
             }
         }
         sc.close();
@@ -123,16 +121,16 @@ public class Main {
 
     public static void exibirMenu() {
         System.out.println("========================================");
-        System.out.println("        SISTEMA BANCÁRIO SIMPLES");
+        System.out.println("           SYSTEM BANK MENU           ");
         System.out.println("========================================");
-        System.out.println("1 - Criar nova conta");
-        System.out.println("2 - Depósito");
-        System.out.println("3 - Saque (taxa R$ 5,00)");
-        System.out.println("4 - Remover conta");
-        System.out.println("5 - Consultar dados da conta");
-        System.out.println("0 - Encerrar sistema");
+        System.out.println("1 - Create account");
+        System.out.println("2 - Deposit");
+        System.out.println("3 - Withdrawal (Rate $5,00)");
+        System.out.println("4 - Delete account");
+        System.out.println("5 - Account data");
+        System.out.println("0 - Exit");
         System.out.println("========================================");
-        System.out.print("Digite a opção desejada: ");
+        System.out.print("Enter the desired option: ");
     }
 
     public static BankAccount findAccount(List<BankAccount> list, int number) {
