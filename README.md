@@ -25,3 +25,20 @@ setters, construtores, sobrecarga de métodos, entre outros tópicos.
 No momento, o sistema permite o cadastro de apenas uma conta e possui funcionalidades básicas.
 Entretanto, pretendo evoluir o projeto continuamente, adicionando novas features e aprimorando
 a estrutura conforme avanço nos meus estudos de Java. 🚧
+---
+## 📌 Histórico de Atualizações
+
+### [08/01/2026]
+- Implementado menu interativo no console
+- Cadastro de múltiplas contas bancárias
+- Geração automática do número da conta
+- Armazenamento das contas utilizando `ArrayList`
+- Busca de contas por número da conta
+- Validações para evitar operações em contas inexistentes
+- Opção de excluir contas
+
+#### Conceitos aplicados (novos)
+- Uso de `ArrayList` para gerenciar múltiplas contas (principal)
+- Busca de objetos em coleções
+- Validações de regras de negócio
+
