@@ -35,7 +35,7 @@ e exibição dos dados da conta. 🚧
 ---
 ## 📌 Histórico de Atualizações
 
-### [08/01/2026]
+### [08/01/2026] - [v0.1.0]
 - Implementado menu interativo no console
 - Cadastro de múltiplas contas bancárias
 - Geração automática do número da conta
