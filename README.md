@@ -21,9 +21,9 @@ setters, construtores, sobrecarga de métodos, entre outros tópicos.
 - Programação Orientada a Objetos (POO)
 - Git & GitHub.
 ---
-## 📘 Primeira Versão do Projeto [21/12/25]
+## 📘 Primeira Versão do Projeto 
 A primeira versão do Sistema Bancário foi desenvolvida como parte do estudo
-dos fundamentos de Programação Orientada a Objetos em Java.
+dos fundamentos de Programação Orientada a Objetos em Java. [21/12/25]
 
 Nessa etapa, o sistema permitia o cadastro de uma única conta bancária,
 realização de depósitos e saques, atualização do nome do titular
