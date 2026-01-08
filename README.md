@@ -28,6 +28,7 @@ dos fundamentos de Programação Orientada a Objetos em Java.
 Nessa etapa, o sistema permitia o cadastro de uma única conta bancária,
 realização de depósitos e saques, atualização do nome do titular
 e exibição dos dados da conta. 🚧
+
 ---
 ## 📌 Histórico de Atualizações
 
