@@ -12,6 +12,7 @@ O projeto tem como objetivo servir como base de estudo e evolução contínua,
 permitindo a incorporação gradual de novos conceitos relacionados à lógica de
 programação, estrutura de dados, organização de código, arquitetura e qualidade
 de software, à medida que novos conhecimentos são adquiridos. 📚
+
 ---
 ## Funcionalidades ⚙️
 - Cadastro de contas recebendo o nome do titular e um depósito inicial (opcional);
