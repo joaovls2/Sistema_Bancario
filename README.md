@@ -1,6 +1,6 @@
 # Sistema Bancário 🏛️💰
 
-## Sobre 🔎
+## 🔎 Sobre 
 Este projeto consiste em um Sistema Bancário desenvolvido em Java, com foco na
 aplicação prática dos princípios da Programação Orientada a Objetos.
 
@@ -14,12 +14,12 @@ programação, estrutura de dados, organização de código, arquitetura e quali
 de software, à medida que novos conhecimentos são adquiridos. 📚
 
 ---
-## Funcionalidades ⚙️
+## ⚙️ Funcionalidades 
 - Cadastro de contas recebendo o nome do titular e um depósito inicial (opcional);
 - Depósitos, saques, remoção de conta, exibição dos dados da conta;
 - Cada saque possui uma taxa fixa de $5;
 ---
-## Tecnologias e Ferramentas 🛠
+## 🛠 Tecnologias e Ferramentas 
 - Java;
 - Programação Orientada a Objetos (POO)
 - Git & GitHub.
