@@ -59,7 +59,7 @@ e exibição dos dados da conta. 🚧
 - Validações para evitar operações em contas inexistentes
 - Opção de excluir contas
 
-#### Conceitos aplicados (novos)
+### Conceitos aplicados (novos)
 - Uso de `ArrayList` para gerenciar múltiplas contas (principal)
 - Busca de objetos em coleções
 - Validações de regras de negócio
