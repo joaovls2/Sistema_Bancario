@@ -35,6 +35,21 @@ e exibição dos dados da conta. 🚧
 ---
 ## 📌 Histórico de Atualizações
 
+### [01/03/2026] - [v0.1.1]
+- Refatoração da estrutura do código para reduzir duplicação
+- Criação do método `validateAccount()` para centralizar a busca e validação de contas
+- Substituição do método `findAccount()` por uma abordagem mais completa de validação
+- Remoção de código repetido nos casos de depósito, saque, exclusão e consulta de contas
+- Melhoria na organização do fluxo da classe Main
+- Validações de regras de negócio adicionadas diretamente na classe BankAccount
+- Tratamento de valores inválidos para operações de depósito e saque
+- Melhoria no encapsulamento da lógica de operações bancárias
+
+### Conceitos aplicados (novos)
+- Refatoração de código
+- Centralização de validações em métodos reutilizáveis
+- Melhoria do encapsulamento da lógica de negócio
+
 ### [08/01/2026] - [v0.1.0]
 - Implementado menu interativo no console
 - Cadastro de múltiplas contas bancárias
