@@ -35,7 +35,7 @@ e exibição dos dados da conta. 🚧
 ---
 ## 📌 Histórico de Atualizações
 
-### [01/03/2026] - [v0.1.1]
+### 🔹 [01/03/2026] - [v0.1.1]
 - Refatoração da estrutura do código para reduzir duplicação
 - Criação do método `validateAccount()` para centralizar a busca e validação de contas
 - Substituição do método `findAccount()` por uma abordagem mais completa de validação
@@ -50,7 +50,7 @@ e exibição dos dados da conta. 🚧
 - Centralização de validações em métodos reutilizáveis
 - Melhoria do encapsulamento da lógica de negócio
 
-### [08/01/2026] - [v0.1.0]
+### 🔹 [08/01/2026] - [v0.1.0]
 - Implementado menu interativo no console
 - Cadastro de múltiplas contas bancárias
 - Geração automática do número da conta
