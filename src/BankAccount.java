@@ -34,13 +34,24 @@ public class BankAccount {
     }
 
     public void deposit(double money) {
+        if(money <= 0) {
+            System.out.println("Deposit amount must be positive.");
+            return;
+        }
+        System.out.println("Deposit successful!");
         this.balance += money;
     }
 
     public boolean cashout(double money) {
         if (money + 5.0 > balance) {
+            System.out.println("Not enough balance to perform this operation.");
             return false;
         }
+        if (money <= 0) {
+            System.out.println("Withdraw amount must be positive.");
+            return false;
+        }
+        System.out.println("Withdraw successful!");
         balance -= money + 5.0;
         return true;
     }

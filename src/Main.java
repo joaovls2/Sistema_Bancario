@@ -9,13 +9,12 @@ public class Main {
 
         int option = -1;
         double money;
-        int number;
         BankAccount foundAccount;
 
         List<BankAccount> accounts = new ArrayList<>();
 
         while (option != 0) {
-            exibirMenu();
+            displayMenu();
             option = sc.nextInt();
 
             switch (option) {
@@ -41,72 +40,38 @@ public class Main {
                     System.out.println(acc);
                     break;
                 case 2:
-                    System.out.println("Account number:");
-                    number = sc.nextInt();
-
-                    BankAccount account = findAccount(accounts, number);
-                    if (account == null) {
-                        System.out.println("No account found. Please create an account first.");
-                    } else {
+                    foundAccount = validateAccount(sc, accounts);
+                    if (foundAccount != null) {
                         System.out.println("Enter deposit value:");
                         money = sc.nextDouble();
-                        account.deposit(money);
-                        System.out.println("Deposit successful!");
+                        foundAccount.deposit(money);
                     }
                     break;
                 case 3:
-                    System.out.println("Account number:");
-                    number = sc.nextInt();
+                    foundAccount = validateAccount(sc, accounts);
 
-                    foundAccount = findAccount(accounts, number);
-                    if (foundAccount == null) {
-                        System.out.println("No account found.");
-                        break;
-                    }
-
-                    System.out.println("Enter withdraw value:");
-                    money = sc.nextDouble();
-
-                    if (money <= 0) {
-                        System.out.println("Invalid value.");
-                        break;
-                    }
-                    if (foundAccount.cashout(money)) {
-                        System.out.println("Withdraw successful!");
-                    } else {
-                        System.out.println("Insufficient balance.");
+                    if (foundAccount != null) {
+                        System.out.println("Enter withdraw value:");
+                        money = sc.nextDouble();
+                        foundAccount.cashout(money);
                     }
                     break;
                 case 4:
-                    System.out.println("Account number:");
-                    number = sc.nextInt();
-
-                    foundAccount = findAccount(accounts, number);
-                    if (foundAccount == null) {
-                        System.out.println("No account found.");
-                        break;
-                    }
-
+                    foundAccount = validateAccount(sc, accounts);
                     sc.nextLine();
-                    System.out.println("Are you sure you want to delete this account? (y/n)");
-                    String confirm = sc.nextLine();
-
-                    if (confirm.equalsIgnoreCase("y")) {
-                        accounts.remove(foundAccount);
-                        System.out.println("Account successfully deleted.");
-                    } else {
-                        System.out.println("Operation canceled.");
+                    if(foundAccount != null) {
+                        System.out.println("Are you sure you want to delete this account? (y/n)");
+                        String confirm = sc.nextLine();
+                        if (confirm.equalsIgnoreCase("y")) {
+                            accounts.remove(foundAccount);
+                            System.out.println("Account successfully deleted.");
+                        }
                     }
                     break;
                 case 5:
-                    System.out.println("Account number:");
-                    number = sc.nextInt();
-
-                    foundAccount = findAccount(accounts, number);
-                    if (foundAccount == null) {
-                        System.out.println("No account found.");
-                    } else {
-                        System.out.println(foundAccount); // chama toString()
+                    foundAccount = validateAccount(sc, accounts);
+                   if (foundAccount != null){
+                        System.out.println(foundAccount); // chama toString
                     }
                     break;
                 case 0:
@@ -119,7 +84,7 @@ public class Main {
         sc.close();
     }
 
-    public static void exibirMenu() {
+    public static void displayMenu() {
         System.out.println("========================================");
         System.out.println("           SYSTEM BANK MENU           ");
         System.out.println("========================================");
@@ -133,12 +98,16 @@ public class Main {
         System.out.print("Enter the desired option: ");
     }
 
-    public static BankAccount findAccount(List<BankAccount> list, int number) {
+    public static BankAccount validateAccount(Scanner sc, List<BankAccount> list) {
+        System.out.println("Enter account number:");
+        int number = sc.nextInt();
+
         for (BankAccount acc : list) {
             if (acc.getAccountNumber() == number) {
                 return acc;
             }
         }
+        System.out.println("No account found.");
         return null;
     }
 }
