@@ -50,6 +50,8 @@ e exibição dos dados da conta. 🚧
 - Centralização de validações em métodos reutilizáveis
 - Melhoria do encapsulamento da lógica de negócio
 
+---
+
 ### 🔹 [08/01/2026] - [v0.1.0]
 - Implementado menu interativo no console
 - Cadastro de múltiplas contas bancárias
