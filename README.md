@@ -35,6 +35,26 @@ e exibição dos dados da conta. 🚧
 ---
 ## 📌 Histórico de Atualizações
 
+### 🔹 [20/04/2026] - [v0.1.2]
+
+Refatoração estrutural do projeto e melhoria na modelagem de regras de negócio
+
+- Implementação de Enum para representar o status da conta (ex: ACTIVE, CLOSED)
+- Alteração da regra de exclusão: contas não são mais removidas da ArrayList, passando a ter status controlado
+- Possibilidade de reativação de contas previamente fechadas
+- Implementação de regra de negócio: contas com status CLOSED não podem realizar movimentações (depósito e saque)
+- Reorganização da estrutura de pacotes (application, model, service)
+- Separação mais clara de responsabilidades entre as camadas do sistema
+
+### Conceitos aplicados (novos)
+
+- Uso de Enum para modelagem de estados
+- Organização de pacotes seguindo boas práticas em Java
+- Evolução na modelagem de regras de negócio mais próximas de sistemas reais
+- Introdução ao conceito de separação de responsabilidades (camadas)
+
+---
+
 ### 🔹 [01/03/2026] - [v0.1.1]
 - Refatoração da estrutura do código para reduzir duplicação
 - Criação do método `validateAccount()` para centralizar a busca e validação de contas
