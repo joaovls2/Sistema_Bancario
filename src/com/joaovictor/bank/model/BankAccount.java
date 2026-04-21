@@ -1,20 +1,25 @@
+package com.joaovictor.bank.model;
+
 public class BankAccount {
 
     private static int nextNumber = 100000;
     private final int accountNumber;
     private String name;
     private double balance;
+    private AccountStatus status;
 
     public BankAccount(String name, double initialDeposit) {
         this.accountNumber = ++nextNumber;
         this.name = name;
         this.balance = initialDeposit;
+        this.status = AccountStatus.ACTIVE;
     }
 
     public BankAccount(String name) {
         this.accountNumber = ++nextNumber;
         this.name = name;
         this.balance = 0.0;
+        this.status = AccountStatus.ACTIVE;
     }
 
     public int getAccountNumber() {
@@ -33,13 +38,18 @@ public class BankAccount {
         return balance;
     }
 
-    public void deposit(double money) {
+    public boolean deposit(double money) {
         if(money <= 0) {
             System.out.println("Deposit amount must be positive.");
-            return;
+            return false;
         }
-        System.out.println("Deposit successful!");
+        if(status == AccountStatus.CLOSED){
+            System.out.println("This account is closed.");
+            return false;
+        }
         this.balance += money;
+        System.out.println("Deposit successful!");
+        return true;
     }
 
     public boolean cashout(double money) {
@@ -51,9 +61,21 @@ public class BankAccount {
             System.out.println("Withdraw amount must be positive.");
             return false;
         }
-        System.out.println("Withdraw successful!");
+        if(status == AccountStatus.CLOSED){
+            System.out.println("This account is closed.");
+            return false;
+        }
         balance -= money + 5.0;
+        System.out.println("Withdraw successful!");
         return true;
+    }
+
+    public void closeAccount(){
+        this.status = AccountStatus.CLOSED;
+    }
+
+    public void activateAccount(){
+        this.status = AccountStatus.ACTIVE;
     }
 
     @Override
@@ -64,6 +86,8 @@ public class BankAccount {
                 + ", Holder: "
                 + name
                 + ", balance: $ "
-                + String.format("%.2f", getBalance());
+                + String.format("%.2f", getBalance())
+                + ", Status: "
+                + status;
     }
 }
